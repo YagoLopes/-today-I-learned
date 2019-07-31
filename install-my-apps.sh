@@ -32,12 +32,28 @@ if ! apt-get install snapd; then
     echo "Não foi possível instalar o pacote snapd"
     exit 1
 fi
+if ! apt-get install samba; then
+    echo "Não foi possível instalar o pacote samba"
+    exit 1
+fi
+if ! apt-get install brasero; then
+    echo "Não foi possível instalar o pacote brasero"
+    exit 1
+fi
+if ! snap install sudo snap install sublime-text-3 --classic --candidate; then
+    echo "Não foi possível instalar o pacote sublime-text-3"
+    exit 1
+fi
 if ! snap install discord; then
     echo "Não foi possível instalar o pacote discord"
     exit 1
 fi
 if ! apt install libgconf-2-4 libappindicator1; then
     echo "Não foi possível instalar o pacote libgconf-2-4 libappindicator1"
+    exit 1
+fi
+if ! snap install spotify; then
+    echo "Não foi possível instalar o pacote discord"
     exit 1
 fi
 
@@ -63,3 +79,25 @@ if ! add-apt-repository ppa:obsproject/obs-studio && apt-get update && apt-get i
     echo "Houve um problema coma a instalação do obs-studio atravéz do ppa:obsproject/obs-studio"
     exit 1
 fi
+
+# Instalando audacity
+if ! add-apt-repository ppa:audacity-team/daily && apt-get update && apt-get install audacity; then
+    echo "Houve um problema coma a instalação do audacity atravéz do ppa:audacity-team/daily"
+    exit 1
+fi
+
+figma
+trello
+google chrome
+isomnia
+openjdk
+genymotion
+virtual box
+vs code
+node
+npm
+yarn
+react
+docker
+docker-compose
+git
