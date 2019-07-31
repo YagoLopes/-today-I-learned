@@ -24,6 +24,10 @@ if ! apt-get install gimp -y; then
     echo "Não foi possível instalar o pacote GIMP"
     exit 1
 fi
+if ! apt-get install openjdk-8-jre-headless -y; then
+    echo "Não foi possível instalar o pacote filezilla"
+    exit 1
+fi
 if ! apt-get install filezilla -y; then
     echo "Não foi possível instalar o pacote filezilla"
     exit 1
@@ -85,18 +89,6 @@ fi
 # Instalando obs-studio
 if ! add-apt-repository ppa:obsproject/obs-studio && apt-get update && apt-get install obs-studio -y; then
     echo "Houve um problema coma a instalação do obs-studio atravéz do ppa:obsproject/obs-studio"
-    exit 1
-fi
-
-# Instalando audacity
-if ! add-apt-repository ppa:audacity-team/daily && apt-get update && apt-get install audacity -y; then
-    echo "Houve um problema coma a instalação do audacity atravéz do ppa:audacity-team/daily"
-    exit 1
-fi
-
-# Instalando openjdk-8
-if ! add-apt-repository ppa:openjdk-r/ppa && apt-get update && apt-get install openjdk-8-jdk -y; then
-    echo "Houve um problema coma a instalação do openjdk atravéz do ppa:openjdk-r/ppa"
     exit 1
 fi
 
