@@ -48,11 +48,19 @@ if ! snap install discord; then
     echo "Não foi possível instalar o pacote discord"
     exit 1
 fi
+if ! snap install figma-linux; then
+    echo "Não foi possível instalar o pacote figma-linux"
+    exit 1
+fi
 if ! apt install libgconf-2-4 libappindicator1; then
     echo "Não foi possível instalar o pacote libgconf-2-4 libappindicator1"
     exit 1
 fi
 if ! snap install spotify; then
+    echo "Não foi possível instalar o pacote discord"
+    exit 1
+fi
+if ! snap install insomnia; then
     echo "Não foi possível instalar o pacote discord"
     exit 1
 fi
@@ -86,18 +94,18 @@ if ! add-apt-repository ppa:audacity-team/daily && apt-get update && apt-get ins
     exit 1
 fi
 
-figma
-trello
-google chrome
-isomnia
-openjdk
-genymotion
-virtual box
-vs code
-node
-npm
-yarn
-react
-docker
-docker-compose
-git
+# Instalando openjdk-8
+if ! add-apt-repository ppa:openjdk-r/ppa && apt-get update && apt-get install openjdk-8-jdk; then
+    echo "Houve um problema coma a instalação do openjdk atravéz do ppa:openjdk-r/ppa"
+    exit 1
+fi
+
+#virtual box
+#vs code
+#node
+#npm
+#yarn
+#react
+#docker
+#docker-compose
+#git
