@@ -52,7 +52,7 @@ if ! snap install figma-linux; then
     echo "Não foi possível instalar o pacote figma-linux"
     exit 1
 fi
-if ! apt install libgconf-2-4 libappindicator1; then
+if ! apt install libgconf-2-4 libappindicator1 -y; then
     echo "Não foi possível instalar o pacote libgconf-2-4 libappindicator1"
     exit 1
 fi
@@ -71,31 +71,31 @@ fi
 
 # Instalando kadenlive
 echo Adicionando novo repositório..
-if ! add-apt-repository ppa:kdenlive/kdenlive-stable && apt-get update && apt-get install kdenlive; then
+if ! add-apt-repository ppa:kdenlive/kdenlive-stable && apt-get update && apt-get install kdenlive -y; then
     echo "Houve um problema coma a instalação do kadenlive atravéz do ppa:kdenlive/kdenlive-stable"
     exit 1
 fi
 
 # Install ffmpeg
-if ! apt-get install ffmpeg; then
+if ! apt-get install ffmpeg -y; then
     echo "Não foi possível instalar o pacote ffmpeg"
     exit 1
 fi
 
 # Instalando obs-studio
-if ! add-apt-repository ppa:obsproject/obs-studio && apt-get update && apt-get install obs-studio; then
+if ! add-apt-repository ppa:obsproject/obs-studio && apt-get update && apt-get install obs-studio -y; then
     echo "Houve um problema coma a instalação do obs-studio atravéz do ppa:obsproject/obs-studio"
     exit 1
 fi
 
 # Instalando audacity
-if ! add-apt-repository ppa:audacity-team/daily && apt-get update && apt-get install audacity; then
+if ! add-apt-repository ppa:audacity-team/daily && apt-get update && apt-get install audacity -y; then
     echo "Houve um problema coma a instalação do audacity atravéz do ppa:audacity-team/daily"
     exit 1
 fi
 
 # Instalando openjdk-8
-if ! add-apt-repository ppa:openjdk-r/ppa && apt-get update && apt-get install openjdk-8-jdk; then
+if ! add-apt-repository ppa:openjdk-r/ppa && apt-get update && apt-get install openjdk-8-jdk -y; then
     echo "Houve um problema coma a instalação do openjdk atravéz do ppa:openjdk-r/ppa"
     exit 1
 fi
