@@ -20,23 +20,23 @@ echo "Atualização de pacotes feita com sucesso"
 
 # Instalando os pacotes que já estão nos repositórios oficias do sistema
 
-if ! apt-get install gimp; then
+if ! apt-get install gimp -y; then
     echo "Não foi possível instalar o pacote GIMP"
     exit 1
 fi
-if ! apt-get install filezilla; then
+if ! apt-get install filezilla -y; then
     echo "Não foi possível instalar o pacote filezilla"
     exit 1
 fi
-if ! apt-get install snapd; then
+if ! apt-get install snapd -y; then
     echo "Não foi possível instalar o pacote snapd"
     exit 1
 fi
-if ! apt-get install samba; then
+if ! apt-get install samba -y; then
     echo "Não foi possível instalar o pacote samba"
     exit 1
 fi
-if ! apt-get install brasero; then
+if ! apt-get install brasero -y; then
     echo "Não foi possível instalar o pacote brasero"
     exit 1
 fi
