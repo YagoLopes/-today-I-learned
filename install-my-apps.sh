@@ -40,10 +40,10 @@ if ! apt-get install brasero -y; then
     echo "Não foi possível instalar o pacote brasero"
     exit 1
 fi
-if ! snap install sudo snap install sublime-text-3 --classic --candidate; then
-    echo "Não foi possível instalar o pacote sublime-text-3"
-    exit 1
-fi
+#if ! snap install sudo snap install sublime-text-3; then
+#   echo "Não foi possível instalar o pacote sublime-text-3"
+#    exit 1
+#fi
 if ! snap install discord; then
     echo "Não foi possível instalar o pacote discord"
     exit 1
