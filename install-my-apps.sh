@@ -68,7 +68,6 @@ if !apt autoremove; then
 fi
 
 #Instalações à serem implementadas
-
 #React Native
 #code
 #sublime-text
