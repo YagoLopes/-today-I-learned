@@ -60,3 +60,14 @@ if !npm i yarn create-react-app -g; then
     echo "Não foi possive instalar pacotes via npm"
     exit 1
 fi
+
+#Removendo pacotes desnecessários
+if !apt autoremove; then
+    echo "Não foi possive remover pacotes desnecessários"
+    exit 1
+fi
+
+#Instalações à serem implementadas
+
+#React Native
+#Customização de barra de tarefa, tema, papel de parede etc...
