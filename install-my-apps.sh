@@ -9,38 +9,24 @@ if ! apt-get update; then
     echo "Não foi possível atualizar os repositórios. Verifique seu arquivo /etc/apt/sources.list"
     exit 1
 fi
-echo "Atualização feita com sucesso"
 
 echo "Atualizando pacotes já instalados"
 if ! apt-get dist-upgrade -y; then
     echo "Não foi possível atualizar pacotes."
     exit 1
 fi
-echo "Atualização de pacotes feita com sucesso"
 
 # Instalando os pacotes atravez do gerenciador apt
 
-if ! apt install git docker docker-compose nodejs npm rar yarn software-properties-common apt-transport-https wget gimp openjdk-8-jre-headless filezilla snapd samba brasero libgconf-2-4 libappindicator1 netbeans -y; then
+if ! apt install docker-compose npm rar yarn software-properties-common apt-transport-https wget openjdk-8-jre-headless filezilla snapd samba brasero libgconf-2-4 libappindicator1 -y; then
     echo "Não foi possível instalar os pacotes travez do gerenciador apt-get"
     exit 1
 fi
 
 # Instalando os pacotes atravez do gerenciador snap
 
-if ! snap install discord figma-linux spotify insomnia; then
+if ! snap install node --classic docker git-ubuntu --classic discord figma-linux spotify gimp insomnia vscode --classic sublime-text --classic vlc skype --classic telegram-desktop transmission-daemon-simosx kdenlive --edge so-trello --edge obs-studio ffmpeg robo3t-snap; then
     echo "Não foi possível instalar os pacotes travez do gerenciador apt-get"
-    exit 1
-fi
-
-#-----------------------------------------------------------------------
-
-# Instalando os pacotes que não estão nos repositórios oficias do sistema
-
-# Adicionando chaves de repo e novos repositórios
-echo Adicionando novo repositório..
-
-if !add-apt-repository ppa:obsproject/obs-studio; then
-    echo "Erro ao adicionar repositórios. Verifique se nenhum dos repósitorios estão quebrados ou se existe alguma chave invalida invalidas."
     exit 1
 fi
 
@@ -50,26 +36,8 @@ if !apt update; then
     exit 1
 fi
 
-# Instalando novos apps
-if ! apt install ffmpeg obs-studio -y; then
-    echo "Não foi possivel instalar os novos pacotes atrevez do gerenciador apt-get"
-    exit 1
-fi
-
-if !npm i create-react-app -g; then
-    echo "Não foi possive instalar pacotes via npm"
-    exit 1
-fi
-
 #Removendo pacotes desnecessários
 if !apt autoremove; then
     echo "Não foi possive remover pacotes desnecessários"
     exit 1
 fi
-
-#Instalações à serem implementadas
-#React Native
-#code
-#sublime-text
-#kdenlive
-#Customização de barra de tarefa, tema, papel de parede etc...
