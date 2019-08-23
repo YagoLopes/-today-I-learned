@@ -1,0 +1,13 @@
+mongoose
+  .connect("mongodb://mongodb/tindev", { useNewUrlParser: true })
+  .then(() => {
+    console.log("#############################################");
+    console.log("Connected to MongoDB");
+    console.log("#############################################");
+  })
+  .catch(err => {
+    console.log("#############################################");
+    console.log(err);
+    console.log("#############################################");
+    process.exit(1); //quit the process
+  });
