@@ -7,7 +7,7 @@
 
 - [ ] Configure o .prettierrc
 
-  - Crie um arquivo com o nome .prettierec
+  - Crie um arquivo com o nome .prettierrc
   - Cole essas configurações no arquivo
 
   ```
@@ -50,7 +50,10 @@
   }
   }
 
-  ```
+ 
+```
+  - Instale os seguintes plugins yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+  - Utilize yarn eslint --fix app --ext .js para chegar varios arquivos dentro de uma pasta
 
 - [ ] Configure o .editorconfig
 
