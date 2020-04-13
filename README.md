@@ -12,10 +12,14 @@ project
 │   │   backup-local.sh
 |   |   install-my-apps.sh
 │
-└───vscode
-    │   eslintrc.json
-    │   README.md
-    |   vs-code-config.json
+ ───vscode
+|   │   eslintrc.json
+|   │   README.md
+|   |   vs-code-config.json
+|
+└───tools
+    │   alternative tools.md
+
 ```
 
 - Developer by [Yago Lopes](http://yagolopes.com)
